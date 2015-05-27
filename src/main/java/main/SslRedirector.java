@@ -23,7 +23,7 @@ public class SslRedirector extends HttpServlet {
 
 		final String queryString = req.getQueryString();
 		String uri = HttpUtils.getRequestURL(req).toString() + 
-				queryString != null ? '?' + queryString : "";
+				(queryString != null ? '?' + queryString : "");
 		System.out.println("SslRedirector.doGet(): " + req.getRemoteAddr() + "->" + uri);
 		if (!uri.startsWith("http:")) {
 			throw new IllegalArgumentException("Invalid URI " + uri);
