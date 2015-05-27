@@ -1,0 +1,5 @@
+nc localhost 8080 <<!
+GET /recipe.seam?cid=1&recipe=42 HTTP/1.1
+Host: androidcookbook.com
+
+!

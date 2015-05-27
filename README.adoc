@@ -1,0 +1,9 @@
+= ssl_redirector
+Interim support: running old ACB site on new server with haproxy
+(using haproxy just as an SSL-enabling reverse proxy).
+Redirect just this one site from http to https (can't redirect all yet, and, 
+can't let the old Seam2 webapp itself do the redirect because
+it's behind haproxy so will see the result as http, and redirect to ssl, 
+and see the result as http...
+
+Recursion: n, see Recursion.
