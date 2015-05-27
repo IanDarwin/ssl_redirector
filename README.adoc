@@ -1,9 +1,17 @@
 = ssl_redirector
-Interim support: running old ACB site on new server with haproxy
-(using haproxy just as an SSL-enabling reverse proxy).
-Redirect just this one site from http to https (can't redirect all yet, and, 
+
+General use case: you run a Java EE server and need to redirect from HTTP to HTTPS with the same site name.
+
+My specific use case: Interim support of running an old site on new server with haproxy
+(using haproxy as an SSL-enabling reverse proxy).
+Redirect just this one site from http to https (The App Server runs many sites, I can't redirect them all 
+to SSL because many of them don't have anything that needs security and don't have SSL certs for), and, 
 can't let the old Seam2 webapp itself do the redirect because
 it's behind haproxy so will see the result as http, and redirect to ssl, 
 and see the result as http...
 
 Recursion: n, see Recursion.
+
+== Bugs
+
+There is probably a better way.
