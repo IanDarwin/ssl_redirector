@@ -2,6 +2,14 @@
 
 General use case: you run a Java EE server and need to redirect from HTTP to HTTPS with the same site name.
 
+== Usage
+
+On JBoss Wildfly, change the hostname in jboss-web.xml.
+
+On other servers, configure and install as needed.
+
+== History
+
 My specific use case: Interim support of running an old site on new server with haproxy
 (using haproxy as an SSL-enabling reverse proxy).
 Redirect just this one site from http to https (The App Server runs many sites, I can't redirect them all 
