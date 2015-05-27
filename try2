@@ -1,0 +1,5 @@
+nc localhost 8080 <<!
+GET /blather.php HTTP/1.1
+Host: androidcookbook.com
+
+!
